@@ -12,17 +12,18 @@
 </head>
 <body>
 <h3>New User Registration</h3>
-<form>
-    <input type="text" name="username" value="username" size="50"><br/>
-    <input type="text" name="password" value="password" size="50"><br/>
-    <input type="text" name="Email" value="Email" size="50"><br/>
-    <td>Gender</td>
+<form method="post" action="register">
+    username<input type="text" name="username"  size="50"><br/>
+    password<input type="text" name="password"  size="50"><br/>
+    Email<input type="text" name="Email"  size="50"><br/>
+    Gemder<td>Gender</td>
     <td>
-        <label><input type="radio" name="sex" value="Male" size="50"/>Male</label>
-        <label><input type="radio" name="sex" value="Female" size="50"/>Female</label>
+        <label><input type="radio" name="sex" size="50"/>Male</label>
+        <label><input type="radio" name="sex"  size="50"/>Female</label>
     </td><br/>
-    <input type="text" name="Email" value="Date of birth(yyy-mm-dd)" size="50"><br/>
-    <input type="submit" value="Send data to server"size="20" bgcolor="#00CCCC"/>
+    birthdate<input type="text" name="birthdate" value="Date of birth(yyy-mm-dd)" size="50"><br/>
+    <input type="submit" value="register"size="20" />
 </form>
 </body>
 </html>
+
