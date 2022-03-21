@@ -15,7 +15,7 @@
           <element id="module-output" name="2020211002010226YangZhihao" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre11" />
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre17" />
         </element>
       </element>
       <element id="directory" name="META-INF">
