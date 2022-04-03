@@ -14,8 +14,8 @@
     Email<input type="text" name="Email"  size="50"><br/>
     Gemder<td>Gender</td>
     <td>
-        <label><input type="radio" name="sex" size="50"/>Male</label>
-        <label><input type="radio" name="sex"  size="50"/>Female</label>
+        <label><input type="radio" name="gender" size="50"/>Male</label>
+        <label><input type="radio" name="gender"  size="50"/>Female</label>
     </td><br/>
     birthdate<input type="text" name="birthdate" value="Date of birth(yyy-mm-dd)" size="50"><br/>
     <input type="submit" value="register"size="20" />
