@@ -25,7 +25,7 @@
 
 
 <a href="hello-servlet">Hello Servlet</a>
-<form>
+<form method = "post"  action = "register">
     <span style="...">New User Registration</span><br/><br/>
     <span style="...">Username</span><input type="text" name="name" required="true" style="..."><br/><br/>
     <span style="...">Password</span><input type="password" name="password" required="true" style="..."><br/><br/>
@@ -34,6 +34,6 @@
     <span style="...">Male</span><input type="radio">
     <span style="...">Female</span><input type="radio"><br/><br/>
     <span style="...">Date of birth(yyy-mm-dd)</span><input type="date" pattern="yyy-mm-dd"required="true" style="..."><br/><br/>
-    <input type="submit " value="register" style="...">
+    <input type="submit" value="register"size="20" />
 </form>
 <%@include file="footer.jsp"%>

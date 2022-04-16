@@ -2,9 +2,12 @@ package com.YangZhihao.week6;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
+
+import javax.servlet.annotation.WebListener;
+import javax.servlet.annotation.WebServlet;
 import java.sql.Connection;
 import java.sql.DriverManager;
-
+@WebListener
 public class JDBCServletcontextlistener implements ServletContextListener {
     @Override
         public void contextInitialized(ServletContextEvent servletContextEvent) {
@@ -24,7 +27,7 @@ public class JDBCServletcontextlistener implements ServletContextListener {
         }
 @Override
         public void contextDestroyed(ServletContextEvent servletContextEvent) {
-            System.out.println(" i am in contextDestroyed()");
+            System.out.println(" i am in JDBCServletContextListener  -->contextDestroyed()");
             servletContextEvent.getServletContext().removeAttribute("con");
         }
     }
