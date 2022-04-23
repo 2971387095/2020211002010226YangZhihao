@@ -49,7 +49,27 @@ public class LoginServlet extends HttpServlet {
         try {
             User user=userdao.findByUsernamePassword(con,username,password);
             if(user!=null){
-                request.setAttribute("user",user);
+//                Cookie c=new Cookie("sessionid",""+user.getId());
+//                c.setMaxAge(10*60);
+//                response.addCookie(c);
+                String rememberMe=request.getParameter("rememberMe");
+                if (rememberMe!=null && rememberMe.equals("1")) {
+                    Cookie usernameCookie = new Cookie("cUsername",user.getUsername());
+                    Cookie passwordCookie = new Cookie("cPassword",user.getPassword());
+                    Cookie rememberMeCookie = new Cookie("cRememberMe",rememberMe);
+                    usernameCookie.setMaxAge(5);
+                    passwordCookie.setMaxAge(5);
+                    rememberMeCookie.setMaxAge(5);
+                    response.addCookie(usernameCookie);
+                    response.addCookie(passwordCookie);
+                    response.addCookie(rememberMeCookie);
+                }
+                HttpSession session = request.getSession();//create session if session not exist -- otherwise return existing session
+                System.out.println("session id --->"+session.getId());//check
+                session.setMaxInactiveInterval(10);
+                //change request(one page) to session -- can get session attribute in many jsp
+                session.setAttribute("user",user);
+//                request.setAttribute("user",user);
             request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
             }else{
             request.setAttribute("message","Username or Password error!!!");

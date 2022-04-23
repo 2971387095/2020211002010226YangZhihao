@@ -1,4 +1,4 @@
-<%--
+<%@ page import="jakarta.servlet.http.Cookie" %><%--
   Created by IntelliJ IDEA.
   User: 86134
   Date: 2022-3-27
@@ -13,10 +13,28 @@
         out.print(request.getAttribute("message"));
     }
 %>
+<%
+    Cookie[] allCookies=request.getCookies();
+    String username="",password="",rememberMeVale="";
+    if(allCookies!=null){
+        for(Cookie c:allCookies){
+            if(c.getName().equals("cUsername")){
+                username=c.getValue();
+            }
+            if(c.getName().equals("cPassword")){
+                password=c.getValue();
+            }
+            if(c.getName().equals("cRememberMe")){
+                rememberMeVale=c.getValue();
+            }
+        }
+    }
+%>
 <br/>
 <form method="post" action="register">
-    username<input type="text" name="username"  size="50"><br/>
-    password<input type="text" name="password"  size="50"><br/>
+    Username<input type="text" name="username"  value="<%=username%>" size="50"><br/>
+    Password<input type="text" name="password" value="<%=password%>"  size="50"><br/>
+            <input type="checkbox" name="rememberMe" value="1"<%=rememberMeVale.equals("1")?"checked":""%>checked/>RememberMe<br/>
     <input type="submit" value="login"size="20" />
 </form>
 <%@include file="footer.jsp"%>
