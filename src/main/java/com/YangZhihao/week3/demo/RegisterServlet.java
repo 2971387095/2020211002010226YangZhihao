@@ -44,11 +44,10 @@ public class RegisterServlet extends HttpServlet {
         con=(Connection) getServletContext().getAttribute("con");
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username=request.getParameter("username");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {String username=request.getParameter("username");
     String password=request.getParameter("password");
     String email=request.getParameter("Email");
     String gender=request.getParameter("gender");
@@ -100,7 +99,7 @@ public class RegisterServlet extends HttpServlet {
             //request.setAttribute("rsname",rs);
             //request.getRequestDispatcher("userlist.jsp").forward(request,response);
             //System.out.println("I am in RegisterServlet-->do post()-->after forward()");
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login");
         } catch (SQLException e) {
             e.printStackTrace();
         }
