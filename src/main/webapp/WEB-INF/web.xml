@@ -22,7 +22,15 @@
         <param-name>password</param-name>
         <param-value>123456</param-value>
     </context-param>
-<!--    <servlet>-->
+    <servlet>
+        <servlet-name>ProductListServlet</servlet-name>
+        <servlet-class>com.YangZhihao.controller.ProductListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddproductServlet</servlet-name>
+        <servlet-class>com.YangZhihao.controller.AddproductServlet</servlet-class>
+    </servlet>
+    <!--    <servlet>-->
 <!--        <servlet-name>week2homework</servlet-name>-->
 <!--        <servlet-class>com.YangZhiahoweek2.homework.HelloWordServlet</servlet-class>-->
 <!--    </servlet>-->
