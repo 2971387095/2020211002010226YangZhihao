@@ -30,6 +30,18 @@
         <servlet-name>AddproductServlet</servlet-name>
         <servlet-class>com.YangZhihao.controller.AddproductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetlmgServlet</servlet-name>
+        <servlet-class>com.YangZhihao.controller.GetlmgServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShopServlet</servlet-name>
+        <servlet-class>com.YangZhihao.controller.ShopServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <servlet-class>com.YangZhihao.controller.ProductDetailsServlet</servlet-class>
+    </servlet>
     <!--    <servlet>-->
 <!--        <servlet-name>week2homework</servlet-name>-->
 <!--        <servlet-class>com.YangZhiahoweek2.homework.HelloWordServlet</servlet-class>-->
