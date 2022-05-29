@@ -81,4 +81,13 @@ public class User {
                 ", birthdate=" + birthdate +
                 '}';
     }
+
+    public void getBirthDate() {
+    }
+
+    public void getBirthday() {
+    }
+
+    public void setBirthDate(String birthDate) {
+    }
 }
