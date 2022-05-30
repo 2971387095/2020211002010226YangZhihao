@@ -1,15 +1,12 @@
 package com.YangZhihao.controller;
-
 import com.YangZhihao.dao.OrderDao;
 import com.YangZhihao.model.Item;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
-
 @WebServlet(value = "/orderDetails")
  public class OrderDetailsServlet extends HttpServlet {
     Connection con=null;
